@@ -1,0 +1,6 @@
+[build]
+  # Resolve paths from the repository root, overriding the saved site base.
+  base = "."
+  # CLI deploys may skip dependency installation; install locked packages first.
+  command = "npm ci --include=dev && npm run build"
+  publish = ".next"
