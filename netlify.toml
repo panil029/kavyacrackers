@@ -4,3 +4,7 @@
   # CLI deploys may skip dependency installation; install locked packages first.
   command = "npm ci --include=dev && npm run build"
   publish = ".next"
+
+# Generate Netlify routing and server functions for Next.js pages and API routes.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

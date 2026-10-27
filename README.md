@@ -33,7 +33,9 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The Next.js app lives at the repository root. The root `netlify.toml` sets
 `base = "."`, runs `npm ci --include=dev && npm run build`, and publishes `.next`. Netlify automatically
-detects Next.js and configures its runtime.
+uses the explicitly configured `@netlify/plugin-nextjs` adapter to generate
+the routing and server functions required by Next.js. Publishing `.next`
+without running this adapter can leave the site showing Netlify's 404 page.
 
 The explicit install uses `package-lock.json` and includes build tools, even
 when a CLI deploy starts without dependencies installed. Keep the lockfile
